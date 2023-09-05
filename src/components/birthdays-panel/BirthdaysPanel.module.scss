@@ -1,0 +1,34 @@
+.birthdays-card {
+  width: 90vw;
+  background-color: rgba(4, 209, 175, 0.4);
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .birthdays-card {
+    width: 50vw;
+  }
+}
+
+.birthday-items-wrapper {
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 2rem 0;
+
+  & p {
+    margin: 1rem 2rem;
+  }
+}

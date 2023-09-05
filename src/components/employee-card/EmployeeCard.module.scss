@@ -1,0 +1,112 @@
+.card {
+  height: 20rem;
+  width: 38rem;
+  opacity: 0.6;
+  margin: 2rem 3rem;
+  z-index: 9999;
+  background-color: rgba(4, 209, 175, 0.4);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: rgba(3, 148, 124, 0.4) 2px 2px;
+  transform: rotateX(35deg) rotateY(25deg) rotateZ(-22.5deg) translateZ(0px);
+  transition: 0.75s all linear;
+  -webkit-transform: rotateX(35deg) rotateY(25deg) rotateZ(-22.5deg)
+    translateZ(0px);
+  -moz-transform: rotateX(35deg) rotateY(25deg) rotateZ(-22.5deg)
+    translateZ(0px);
+  -ms-transform: rotateX(35deg) rotateY(25deg) rotateZ(-22.5deg) translateZ(0px);
+  -o-transform: rotateX(35deg) rotateY(25deg) rotateZ(-22.5deg) translateZ(0px);
+  -webkit-transition: 0.75s all linear;
+  -moz-transition: 0.75s all linear;
+  -ms-transition: 0.75s all linear;
+  -o-transition: 0.75s all linear;
+
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(4, 209, 175, 0.5);
+    transform: rotateY(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
+      scale(1.5);
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
+      scale(1.5);
+    -moz-transform: rotateY(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
+      scale(1.5);
+    -ms-transform: rotateY(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
+      scale(1.5);
+    -o-transform: rotateY(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px)
+      scale(1.5);
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.card-text {
+  margin-top: 1rem;
+}
+
+.card-telephone,
+.card-email {
+  color: rgb(0, 255, 213);
+  border-bottom: 1px solid rgb(0, 255, 213);
+  text-decoration: none;
+  margin-top: 1rem;
+  cursor: url("../../../public/img/cursorSelect.cur"), auto;
+}
+
+.card-telephone:hover,
+.card-email:hover {
+  color: white;
+}
+
+.card-telephone:focus,
+.card-email:focus,
+.card-telephone:active,
+.card-email:active {
+  color: rgb(0, 255, 213);
+  margin-top: 1rem;
+  cursor: url("../../../public/img/cursorSelect.cur"), auto;
+}
+
+.card-telephone {
+  font-size: 1.4rem;
+}
+
+.card-email {
+  font-size: 1.2rem;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+  width: 12rem;
+  height: 12rem;
+  margin-left: 3rem;
+  border-radius: 4px;
+  border: solid 1px rgb(33, 179, 154);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  object-fit: cover;
+}

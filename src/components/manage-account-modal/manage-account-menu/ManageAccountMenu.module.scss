@@ -1,0 +1,106 @@
+.page {
+  padding-top: 4rem;
+  height: 34rem;
+  width: 32rem;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: rgba(4, 209, 175, 0.4);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: rgba(3, 148, 124, 0.4) 2px 2px;
+  display: grid;
+  grid-template-columns: 8rem 1fr 8rem;
+  grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
+
+  button {
+    margin-bottom: 2rem;
+  }
+
+  animation-name: initial-animation;
+  animation-duration: 1.4s;
+}
+
+.button-close-wrapper {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5rem;
+  margin-right: -3rem;
+}
+
+.button-wrapper {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+}
+
+.button {
+  background-color: #01a0a5;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 1rem;
+  margin-top: -3rem;
+  margin-right: -1rem;
+  min-width: 4rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+}
+
+.button:active {
+  transform: translateY(0.25rem);
+  -webkit-transform: translateY(0.25rem);
+  -moz-transform: translateY(0.25rem);
+  -ms-transform: translateY(0.25rem);
+  -o-transform: translateY(0.25rem);
+}
+
+.button:focus {
+  background-color: #027386;
+}
+
+//// Keyframes
+@keyframes initial-animation {
+  from {
+    opacity: 0;
+    transition: 1.5s all linear;
+    -webkit-transition: 1.5s all linear;
+    -moz-transition: 1.5s all linear;
+    -ms-transition: 1.5s all linear;
+    -o-transition: 1.5s all linear;
+  }
+  to {
+    opacity: 1;
+  }
+}

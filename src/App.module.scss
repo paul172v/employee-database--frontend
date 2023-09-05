@@ -1,0 +1,29 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.vid {
+  width: 100vw;
+  z-index: 1;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 1400px) {
+    height: 175%;
+    width: 175%;
+    top: -50%;
+    left: -50%;
+  }
+
+  @media (orientation: portrait) {
+    rotate: (90deg);
+    height: 220%;
+    width: 220%;
+  }
+}

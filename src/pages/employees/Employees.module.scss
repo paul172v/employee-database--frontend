@@ -1,0 +1,122 @@
+.filters-card {
+  width: 90vw;
+  background-color: rgba(4, 209, 175, 0.4);
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem 2rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .announcements-card {
+    width: 50vw;
+  }
+}
+
+.employees-wrapper {
+  height: 1vh;
+  width: 94vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  justify-content: center;
+  margin-bottom: 60rem;
+  animation: cards-initial-animation;
+  -webkit-animation: cards-initial-animation;
+  animation-duration: 1.6s;
+}
+
+.buttons-wrapper {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@keyframes cards-initial-animation {
+  from {
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: 0.75s all linear;
+    -webkit-transition: 0.75s all linear;
+    -moz-transition: 0.75s all linear;
+    -ms-transition: 0.75s all linear;
+    -o-transition: 0.75s all linear;
+    -webkit-transform: translateY(50rem);
+    -moz-transform: translateY(50rem);
+    -ms-transform: translateY(50rem);
+    -o-transform: translateY(50rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.employees-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1rem;
+}
+
+.select-box {
+  margin: 0 2rem;
+}
+
+.match-form-width {
+  width: 50rem;
+  margin-left: -1.5rem;
+}
+
+.employees-submit-button {
+  background-color: #01a0a5;
+  color: white;
+  font-size: 1.6rem;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  margin: 1rem 0;
+  width: 50rem;
+}
+
+.employees-submit-button:hover {
+  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+  cursor: url("../../../public/img/cursorSelect.cur"), auto;
+}
+
+.employees-submit-button:active {
+  transform: translateY(0.25rem);
+  -webkit-transform: translateY(0.25rem);
+  -moz-transform: translateY(0.25rem);
+  -ms-transform: translateY(0.25rem);
+  -o-transform: translateY(0.25rem);
+}
+
+.employees-submit-button:focus {
+  background-color: #027386;
+}

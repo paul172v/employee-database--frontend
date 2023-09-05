@@ -1,13 +1,243 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nanum Gothic Coding", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url(/public//img//cursor.cur), auto;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2,
+h3,
+p,
+label {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin: 2rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p,
+a {
+  font-size: 1.7rem;
+}
+
+a {
+  color: rgba(0, 255, 213, 0.493);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008366,
+      0 0 40px #008366, 0 0 50px #008366, 0 0 60px #008366, 0 0 70px #008366;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #008ba3, 0 0 40px #008ba3,
+      0 0 50px #008ba3, 0 0 60px #008ba3, 0 0 70px #008ba3, 0 0 80px #008ba3;
+  }
+}
+
+.error-message {
+  grid-column: 1/3;
+  animation: redGlow 1.5s ease-in-out infinite alternate;
+  -webkit-animation: redGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes redGlow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bb0000,
+      0 0 40px #bb0000, 0 0 50px #bb0000, 0 0 60px #bb0000, 0 0 70px #830000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #6b0000, 0 0 40px #6b0000,
+      0 0 50px #6b0000, 0 0 60px #6b0000, 0 0 70px #6b0000, 0 0 80px #008ba3;
+  }
+}
+
+label {
+  justify-self: flex-end;
+  font-size: 1.4rem;
+}
+
+label:hover {
+  cursor: url(/public//img//cursor.cur), auto;
+}
+
+input {
+  background-color: rgba(0, 255, 213, 0.493);
+  color: black;
+  font-size: 1.7rem;
+}
+
+input:focus {
+  background-color: #027386;
+  color: white;
+}
+
+button:hover {
+  cursor: url(/public/img/cursorSelect.cur), auto;
+}
+
+#modal-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.u-gap {
+  margin-bottom: 5rem;
+}
+
+.u-row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.u-row-3 h1 {
+  margin-left: 4rem;
+}
+
+.u-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.u-column {
+  display: flex;
+  flex-direction: column;
+}
+
+form,
+.form-wide {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  grid-template-rows: 2rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  margin-left: -1rem;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form-wide {
+  grid-template-columns: 14rem 1fr;
+}
+
+input:last-of-type {
+  margin-bottom: 1rem;
+}
+
+input {
+  cursor: url("../public/img/cursorSelect.cur"), auto;
+}
+
+.button,
+.submit-button {
+  margin-top: 5rem;
+  background-color: #01a0a5;
+  color: white;
+  font-size: 1.6rem;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  width: 8rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.submit-button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.button:hover,
+.submit-button:hover {
+  cursor: url("../public/img/cursorSelect.cur"), auto;
+  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+}
+
+.button:active,
+.submit-button:active {
+  transform: translateY(0.25rem);
+  -webkit-transform: translateY(0.25rem);
+  -moz-transform: translateY(0.25rem);
+  -ms-transform: translateY(0.25rem);
+  -o-transform: translateY(0.25rem);
+}
+
+.button:focus,
+.submit-button:focus {
+  background-color: #027386;
+}
+
+select {
+  background-color: rgba(0, 255, 213, 0.493);
+  color: white;
+  font-size: 1.4rem;
+  padding: 0 1rem;
+}
+
+select:hover {
+  cursor: url("../public/img/cursorSelect.cur"), auto;
+}
+
+select:focus {
+  background-color: #027386;
+}
+
+.option {
+  background-color: rgba(0, 255, 213, 0.493);
+  color: white;
+}
+
+.option:checked,
+.option:hover,
+.option:active,
+.option:focus,
+.option::selection {
+  background-color: black;
+  color: red;
 }

@@ -1,0 +1,126 @@
+.card {
+  min-height: 80vh;
+  width: 70vw;
+  z-index: 9999;
+  background-color: rgba(4, 209, 175, 0.4);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: rgba(3, 148, 124, 0.4) 2px 2px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-name: initial-animation;
+  animation-duration: 1.75s;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+.button {
+  margin-top: 1rem;
+  background-color: #01a0a5;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  min-width: 8rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  cursor: url("../../../../public/img/cursorSelect.cur"), auto;
+  transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+}
+
+.button:active {
+  transform: translateY(0.25rem);
+  -webkit-transform: translateY(0.25rem);
+  -moz-transform: translateY(0.25rem);
+  -ms-transform: translateY(0.25rem);
+  -o-transform: translateY(0.25rem);
+}
+
+.button:focus {
+  background-color: #027386;
+}
+
+//// Keyframes
+@keyframes initial-animation {
+  from {
+    opacity: 0;
+    transition: 1.5s all linear;
+    -webkit-transition: 1.5s all linear;
+    -moz-transition: 1.5s all linear;
+    -ms-transition: 1.5s all linear;
+    -o-transition: 1.5s all linear;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.three-columns-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .three-columns-wrapper {
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 90vh;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.h2 {
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  margin-top: 1rem;
+
+  p {
+    margin-left: 1rem;
+    margin-top: 0.13rem;
+  }
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.photo {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 4px;
+  border: solid 1px rgb(33, 179, 154);
+}
