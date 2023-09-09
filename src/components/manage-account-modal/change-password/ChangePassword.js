@@ -46,19 +46,22 @@ const ChangePassword = (props) => {
       newPassword.length > 0 &&
       newPassword === newPasswordConfirm
     ) {
-      await fetch("http://127.0.0.1:5000/api/v1/users/change-password", {
-        method: "PATCH",
+      await fetch(
+        "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/change-password",
+        {
+          method: "PATCH",
 
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify({
-          curPassword: curPassword,
-          newPassword: newPassword,
-        }),
-      })
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify({
+            curPassword: curPassword,
+            newPassword: newPassword,
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

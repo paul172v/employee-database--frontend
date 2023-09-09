@@ -54,18 +54,21 @@ const LogIn = (props) => {
     }
 
     if (email && password) {
-      await fetch("http://127.0.0.1:5000/api/v1/users/login", {
-        method: "POST",
+      await fetch(
+        "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/login",
+        {
+          method: "POST",
 
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      })
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

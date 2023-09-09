@@ -28,8 +28,7 @@
   padding: 4rem 2rem;
   justify-content: center;
   margin-bottom: 60rem;
-  animation: cards-initial-animation;
-  -webkit-animation: cards-initial-animation;
+  animation-name: cards-initial-animation;
   animation-duration: 1.6s;
 }
 

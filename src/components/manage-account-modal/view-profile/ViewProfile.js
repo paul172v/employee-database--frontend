@@ -75,7 +75,7 @@ const ViewProfile = (props) => {
                   className={classes.photo}
                   src={
                     employeesDataCtx.currentUserState.photo !== null
-                      ? `http://localhost:5000/public/img/user-photos/${employeesDataCtx.currentUserState.photo}`
+                      ? `https://test172v-b8264eda63d9.herokuapp.com/public/img/user-photos/${employeesDataCtx.currentUserState.photo}`
                       : "/img/user-photos/default.jpg"
                   }
                   alt={`${employeesDataCtx.currentUserState.firstName} ${employeesDataCtx.currentUserState.lastName} ${employeesDataCtx.photoCounter}`}

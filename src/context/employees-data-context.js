@@ -32,7 +32,7 @@ export const EmployeesDataContextProvider = (props) => {
   const errorCtx = useContext(errorContext);
 
   const fetchAllEmployeesDataHandler = async (token) => {
-    await fetch("http://127.0.0.1:5000/api/v1/users/", {
+    await fetch("https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/", {
       method: "GET",
 
       headers: {
@@ -48,19 +48,22 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const fetchFilteredResultsHandler = (token, criteria, targetWord) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/specific-search", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/specific-search",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        criteria,
-        targetWord,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          criteria,
+          targetWord,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success") {
@@ -78,18 +81,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortLastNameAtoZHandler = async (token) => {
-    await fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    await fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -102,18 +108,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortLastNameZtoAHandler = (token) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -126,18 +135,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortPositionAtoZHandler = (token) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -151,18 +163,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortPositionZtoAHandler = (token) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -176,18 +191,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortDepartmentAtoZHandler = (token) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -201,18 +219,21 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const sortDepartmentZtoAHandler = (token) => {
-    fetch("http://127.0.0.1:5000/api/v1/users/sort-users", {
-      method: "POST",
+    fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/sort-users",
+      {
+        method: "POST",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        users: employeesState,
-      }),
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          users: employeesState,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data.payload);
@@ -225,15 +246,18 @@ export const EmployeesDataContextProvider = (props) => {
   };
 
   const getUserFromToken = async (token) => {
-    await fetch("http://127.0.0.1:5000/api/v1/users/get-user", {
-      method: "GET",
+    await fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/get-user",
+      {
+        method: "GET",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         setCurrentUserState(data.payload);

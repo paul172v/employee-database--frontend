@@ -43,17 +43,20 @@ const EmailResetToken = () => {
     }
 
     if (email) {
-      await fetch("http://127.0.0.1:5000/api/v1/users/forgot-password", {
-        method: "POST",
+      await fetch(
+        "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/forgot-password",
+        {
+          method: "POST",
 
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      })
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

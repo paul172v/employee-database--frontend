@@ -33,15 +33,18 @@ const EditProfile = (props) => {
   };
 
   const getData = async () => {
-    await fetch("http://127.0.0.1:5000/api/v1/users/get-user", {
-      method: "GET",
+    await fetch(
+      "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/get-user",
+      {
+        method: "GET",
 
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-    })
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         setUser(data.payload);
@@ -68,7 +71,7 @@ const EditProfile = (props) => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/v1/users/update-profile",
+        "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/update-profile",
         {
           method: "POST",
           headers: {

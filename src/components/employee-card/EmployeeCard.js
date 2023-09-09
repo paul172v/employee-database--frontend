@@ -13,7 +13,9 @@ const EmployeeCard = (props) => {
   const [photo, setPhoto] = useState(null);
 
   useEffect(() => {
-    setPhoto(`http://localhost:5000/public/img/user-photos/${props.photo}`);
+    setPhoto(
+      `https://test172v-b8264eda63d9.herokuapp.com/public/img/user-photos/${props.photo}`
+    );
   }, []);
 
   return (

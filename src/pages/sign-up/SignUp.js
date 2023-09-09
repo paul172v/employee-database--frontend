@@ -52,19 +52,22 @@ const SignUp = () => {
     }
 
     if (email && password && passwordConfirm && password === passwordConfirm) {
-      await fetch("http://127.0.0.1:5000/api/v1/users/signup", {
-        method: "POST",
+      await fetch(
+        "https://test172v-b8264eda63d9.herokuapp.com/api/v1/users/signup",
+        {
+          method: "POST",
 
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          passwordChangedAt: Date.now(),
-        }),
-      })
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+            passwordChangedAt: Date.now(),
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
